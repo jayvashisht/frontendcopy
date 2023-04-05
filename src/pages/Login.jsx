@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import {toast} from 'react-toastify'
 import {useNavigate} from 'react-router-dom'
-import {FASignInAlt} from 'react-icons/fa'
+import {FaSignInAlt} from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import {login, reset} from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
@@ -15,7 +15,7 @@ function Login() {
     const {email, password} = formData
 
     const dispatch = useDispatch()
-    const navigation = useNavigate()
+    const navigate = useNavigate()
 
     const {user, isLoading, isError, isSuccess, message} = useSelector(
         (state) => state.auth
@@ -60,7 +60,7 @@ function Login() {
         <>
             <section className="heading">
                 <h1>
-                   <FASignInAlt /> Login
+                   <FaSignInAlt /> Login
                 </h1>
                 <p>Please login to get support</p>
                 </section>
